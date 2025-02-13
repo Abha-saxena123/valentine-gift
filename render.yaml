@@ -1,0 +1,13 @@
+services:
+  - name: nextjs-app
+    type: web
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    env:
+      - key: NODE_VERSION
+        value: 18
+    plan: free
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
