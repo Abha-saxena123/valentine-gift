@@ -1,3 +1,7 @@
 services:
   - type: web
-    plan: free
+    name: my-app  # Provide a valid service name
+    runtime: node  # Use a valid runtime (node, python, ruby, etc.)
+    plan: free  # Ensure it's set to "free" if you want a free-tier instance
+    buildCommand: npm install  # Adjust based on your project
+    startCommand: npm start  # The command to run your app
