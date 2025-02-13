@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Heart3D } from "../components/heart";
-import { Book } from "@/valentine-gift/components/book";
+import { Book } from "../components/book";
 
 const generateHearts = (count) => {
   return Array.from({ length: count }, (_, i) => ({
@@ -44,7 +44,6 @@ export default function Home() {
       </div>
       { !openBook && <Heart3D setOpenBook={ setOpenBook } /> }
       { openBook && <Book setOpenBook={ setOpenBook } /> }
-
-    </div >
+    </div>
   );
 }
