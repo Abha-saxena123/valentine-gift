@@ -1,7 +1,6 @@
 services:
-  - name: nextjs-app
-    type: web
-    runtime: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
-    plan: free
+  - type: web
+    name: my-app
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
